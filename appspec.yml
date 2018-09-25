@@ -2,13 +2,11 @@ version: 0.0
 os: linux
 
 files:
- -
-    source: files/index.html
+  - source: files/index.html
     destination: /var/www/html
     
 permission:
-  -
-    object: /var/www/html
+  - object: /var/www/html
     pattern: index.html
     owner: apache
     group: apache
