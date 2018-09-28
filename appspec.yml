@@ -1,11 +1,11 @@
 version: 0.0
 os: linux
 
-files:
+files: 
   - source: files/index.html
     destination: /var/www/html
-    
-permission:
+
+permissions:
   - object: /var/www/html
     pattern: index.html
     owner: apache
@@ -13,7 +13,7 @@ permission:
     mode: 644
     type:
       - file
-        
+
 hooks:
   BeforeInstall:
     - location: scripts/webserver-stop.sh
@@ -21,4 +21,3 @@ hooks:
   AfterInstall:
     - location: scripts/sleep.sh
     - location: scripts/webserver-start.sh
- 
